@@ -1,8 +1,82 @@
+/*====================== FONTS ======================*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&family=Space+Mono:wght@400;700&display=swap');
+:root{
+  --gris: #BDBDBD;
+  --grisOscuro: ##4F4F4F;
+  --bgButton: #333333;
+}
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
+    font-size: 62.5%; /* 1rem = 10px*/
     box-sizing: border-box;
   }
   *, *:before, *:after {
     box-sizing: inherit;
   }
-  
+
+body{
+  font-family: 'Space Mono', monospace;
+  font-size: 1.8rem;
+}
+img{width: 100%;}
+h1,h2,h3,h4{font-family: 'Inconsolata', monospace;}
+.title{font-size: 4.8rem;}
+.subtitle{font-size: 2.4;}
+.container{
+  max-width: 120rem;
+  width: 95%;
+  margin: 0 auto;
+}
+/*=========== UTILIDADES ===========*/
+.uppercase{text-transform: uppercase;}
+/*========= Header =========*/
+.header{margin-bottom: 5rem;}
+/*========= Main =========*/
+.main-img{
+  margin-bottom: 7rem;
+}
+.main-descripcion p{
+  text-align: justify;
+  margin-bottom: 7rem;
+}
+@media (min-width: 768px){
+  .main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+  .main-descripcion p{
+    text-align: left;
+    width: 26rem;
+  }
+  .espantapajaros{
+    width: 60rem;
+  }
+  .title{
+    width: 40rem;
+  }
+}
+/*========= Button =========*/
+.btn-homepage{
+  margin-bottom: 10rem;
+}
+.button{
+  border: none;
+  background-color: var(--bgButton);
+  color: white;
+  padding: 2.5rem 2rem;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: rgb(255,210,91);
+  color: var(--grisOscuro);
+}
+/*========= Footer =========*/
+.footer{
+  color: var(--gris);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
